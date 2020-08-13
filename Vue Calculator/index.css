@@ -1,0 +1,79 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* 上下左右居中 */
+    background-color: #eee;
+
+
+}
+
+.calculator{
+    --button-width:80px;
+    --button-height:80px;
+    display: grid;
+    grid-template-areas:"result result result result"
+    /* 横向4列，纵向6列 */
+    /* 第一行用来显示计算结果 */
+    "ac plus-minus percent divide"
+    "number-7 number-8 number-9 multiply"
+    "number-4 number-5 number-6 subtract"
+    "number-1 number-2 number-3 add"
+    "number-0 number-0 dot equal";
+    grid-template-columns: repeat(4,var(--button-width));
+    grid-template-rows: repeat(6,var(--button-height));
+    /*
+    使用repeat函数，重复4次，然后大小引用 --button-width
+   再加入grid-template-rows设定列的大小
+   使用repeat函数，重复6次，然后大小引用--button-height
+  */
+  /* 拟态化关键 */
+ 
+  box-shadow: -8px -8px 16px -10px rgba(255, 255, 255, 1), 8px 8px 16px -10px rgba(0, 0, 0, .15);
+  /* 白色，透明度为1  */
+  /* x，y为-8px
+设定模糊半径是16px，扩散半径是-10px
+设定位于右下的第二个阴影
+ */
+  padding: 24px;
+  border-radius: 20px;
+
+
+  
+
+}
+
+.calculator button{
+    margin: 8px;
+    padding:0;
+    border:0;
+    display: block;
+    outline: none;
+    border-radius: calc(var(--button-height)/2);
+    font-size: 24px;
+    font-family: Helvetica;
+    font-weight: normal;
+    color: #999;
+    /* 文字颜色 */
+    background: linear-gradient(135deg, rgba(230, 230, 230, 1) 0%, rgba(246, 246, 246, 1) 100%);
+    box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1), 4px 4px 10px -8px rgba(0, 0, 0, .3);
+}
+.calculator button:active{
+   /*
+    设定按钮的背景颜色，这里会用到渐层颜色
+    由左上至右下，浅灰色到更浅的灰色
+    设定按钮下去时的样式，这里主要是将阴影由外部改为内部
+  */
+  box-shadow: -4px -4px 10px -8px rgba(255, 255, 255, 1) inset, 4px 4px 10px -8px rgba(0, 0, 0, .3) inset;
+/* insert表示将阴影改为内部 */
+}
+.result{
+    text-align: right;
+    line-height: var(--button-height);
+    font-size:48px;
+    font-family: Helvetica;
+    padding: 0 20px;
+    color: #666;
+    
+}

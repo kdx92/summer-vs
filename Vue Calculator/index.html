@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Calculator</title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+    <div id="app">
+    <div class="calculator">
+        <div class="result" style="grid-area: result">
+            <!-- 显示计算结果 -->
+            <!-- 加入19个按钮，包括8个功能按钮 -->
+            {{equation}}
+        </div>
+        <button style="grid-area: ac" @click="clear">AC</button>
+    <button style="grid-area: plus-minus" @click="calculateToggle">±</button>
+    <button style="grid-area: percent" @click="calculatePercentage">%</button>
+    <button style="grid-area: add" @click="append('+')">+</button>
+    <button style="grid-area: subtract" @click="append('-')">-</button>
+    <button style="grid-area: multiply" @click="append('×')">×</button>
+    <button style="grid-area: divide" @click="append('÷')">÷</button>
+    <button style="grid-area: equal" @click="calculate">=</button>
+
+    <button style="grid-area: number-1" @click="append(1)">1</button>
+    <button style="grid-area: number-2" @click="append(2)">2</button>
+    <button style="grid-area: number-3" @click="append(3)">3</button>
+    <button style="grid-area: number-4" @click="append(4)">4</button>
+    <button style="grid-area: number-5" @click="append(5)">5</button>
+    <button style="grid-area: number-6" @click="append(6)">6</button>
+    <button style="grid-area: number-7" @click="append(7)">7</button>
+    <button style="grid-area: number-8" @click="append(8)">8</button>
+    <button style="grid-area: number-9" @click="append(9)">9</button>
+    <button style="grid-area: number-0" @click="append(0)">0</button>
+
+    <button style="grid-area: dot" @click="append('.')">.</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    new Vue({
+        el:'#app',
+        data:{
+            equation:'0',
+            isDecimalAdded:false,
+            // 判断是否已输入小数位
+            //用来防止在一组数字之间输入超过1个小数位
+            isOperatorAdded:false,
+            // 判断是否已点击加、减、乘或除
+            // 防止连续点击超过一个运算符号
+            isStarted:false,
+            // 判断计算器是否已开始输入数字
+            // 用于正负数和百分比计算的时候的判断
+
+
+        },
+        methods:{
+            // 先定义所有会用到的函数
+            // Check if the character is + / - / × / ÷
+            isOperator(character){
+                // 将加、减、乘和除号组成一个陈列
+                return ['+', '-', '×', '÷'].indexOf(character) > -1
+            },
+            // 因为会在几个位置作此判断，所以定义为一个函数重复使用
+            // When pressed Operators or Numbers
+            append(character){
+                // 一开始输入的一定要是数字，不可以是运算符号
+                // 再判断输入的是否为小数位符号
+                // 如果第一个输入的字符是小数位，就保留原来的0
+                // Start
+                if (this.equation === '0' && !this.isOperator(character)) {
+                    if (character === '.') {
+                        this.equation += '' + character
+                        this.isDecimalAdded = true
+                    } else {
+                        this.equation = '' + character
+                    }
+        
+                    this.isStarted = true
+                    return
+                }
+                // If Number
+                if (!this.isOperator(character)) {
+                    //即代表输入的是数字
+
+                    if (character === '.' && this.isDecimalAdded) {
+                        return
+                    }
+        
+                    if (character === '.') {
+                        this.isDecimalAdded = true
+                        this.isOperatorAdded = true
+                    } else {
+                    this.isOperatorAdded = false
+                    }
+                    //防止在小数位符号直接输入运算符号
+        
+                    this.equation += '' + character
+        //可以连续输入数字，但是小数位符号可以一直输入
+                }
+                // Added Operator
+                if (this.isOperator(character) && !this.isOperatorAdded) {
+                    this.equation += '' + character
+                    //将运算符号加到equation
+                    this.isDecimalAdded = false
+                    //这样可以重新输入小数位数
+                    this.isOperatorAdded = true
+                }
+                //但是运算符号可以重复输入了
+                //所以加入&& !this.isOperatorAdded
+                //和this.isOperatorAdded = true
+            },
+               
+            
+            // When pressed '='
+            calculate(){
+                let result = this.equation.replace(new RegExp('×', 'g'), '*').replace(new RegExp('÷', 'g'), '/')
+                // 先将 × 和 ÷号替换成运算式版本的符号
+
+                this.equation = parseFloat(eval(result).toFixed(9)).toString()
+                this.isDecimalAdded = false
+                this.isOperatorAdded = false
+            },
+            // When pressed '+/-'
+            calculateToggle(){
+                if (this.isOperatorAdded || !this.isStarted) {
+                    //如果是刚输入运算符号，或者未开始使用计算器
+                    return
+                }
+      
+                this.equation = this.equation + '* -1'
+                this.calculate()
+            },
+            calculatePercentage(){
+                if (this.isOperatorAdded || !this.isStarted) {
+                    return
+                }
+      
+                this.equation = this.equation + '* 0.01'
+                this.calculate()
+            },
+            clear(){
+                // 只需将所有data设定为预设值就可以了
+                this.equation = '0'
+                this.isDecimalAdded = false
+                this.isOperatorAdded = false
+                this.isStarted = false
+            }
+
+
+
+        }
+
+    }
+
+    )
+    </script>
+
+    </body>
+    </html>
