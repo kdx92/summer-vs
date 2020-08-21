@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html, body {
+  height: 100%;
+  background-color: darkcyan;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Karla', sans-serif;
+}
+
+.main-container {
+  width: 700px;
+  height: 400px;
+  background-color: white;
+  font-size: 0px;
+}
+
+.main-container .left {
+  display: inline-block;
+  width: 350px;
+  height: 400px;
+  vertical-align: top;
+  text-align: center;
+  background-color: #4bdada;
+}
+
+.main-container .left .week {
+  text-transform: uppercase;
+  font-size: 35px;
+  color: white;
+  line-height: 100px;
+}
+
+.main-container .left .day {
+  font-size: 180px;
+  color: white;
+}
+
+.main-container .right {
+  display: inline-block;
+  width: 350px;
+  height: 400px;
+  text-align: center;
+}
+
+.main-container .right .year {
+  text-transform: uppercase;
+  font-size: 35px;
+  color: #21a5a5;
+  font-weight: bolder;
+  line-height: 100px;
+}
+
+.main-container .right .calendar .weeks .item {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+/*# sourceMappingURL=style.css.map */
