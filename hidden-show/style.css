@@ -1,0 +1,43 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html,body {
+  height: 100%;
+
+}
+
+body {
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  width: 100%;
+  height: 120px;
+  text-align: center;
+}
+
+.main-container .text {
+  font-family: 'Barlow', sans-serif;
+  font-size: 120px;
+  line-height: 120px;
+  height: 120px;
+  text-transform: uppercase;
+}
+
+.main-container .text:nth-child(1) {
+  clip-path: polygon(0 0, 100% 0,100% 50%, 0 100%);
+}
+
+.main-container .text:nth-child(3) {
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+.main-container .inner-text {
+  height: 0px;
+  overflow: hidden;
+  
+}
