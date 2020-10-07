@@ -1,0 +1,668 @@
+/* 版心 */
+.b {  
+  width: 1190px;
+  margin: 0 auto;
+
+}
+
+body {
+  /* background-color: rgb(244, 244, 244); */
+  background-color: rgb(255, 255, 255);
+}
+
+ul, h1, input, dd {
+  margin: 0px;
+  padding: 0px;
+}
+
+input, button {
+  outline: none;
+
+}
+ul {
+  list-style: none;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+.clear {
+  overflow: hidden;
+}
+
+img {
+  vertical-align: top;
+}
+/* header部分 */
+header {
+  height: 80px;
+  background-color: rgb(0, 0, 0);
+
+}
+
+/* 第一个灰色的导航栏 */
+.first-nav {
+  height: 30px;
+  background-color: rgb(227, 228, 229);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  font-size: 12px;
+  line-height: 30px;
+  color: rgb(153, 153, 153);
+}
+
+/* 城市的选择 */
+.pos {
+  float: left;
+  margin-left: 200px;
+}
+
+.pos i {
+  color: rgb(241, 2, 21);
+}
+
+/* 灰色导航栏右侧的选择 */
+.cho {
+  float: right;
+}
+
+.cho li {
+  float: left;
+}
+.cho li a {
+  color: rgb(153, 153, 153);
+  font-size: 12px;
+}
+.cho li a:hover {
+  color: rgb(227, 51, 51);
+}
+
+.line {
+  height: 10px;
+  width: 1px;
+  background-color: rgb(204, 204, 204);
+  margin: 10px 12px 0px;
+}
+
+.first-nav .sp-color {
+  color: rgb(241, 2, 21);
+}
+.cho i {
+  color: rgb(153, 153, 153);
+  margin-top: 20px;
+}
+
+.pic {
+  position: relative;
+}
+
+.pic img {
+  position: absolute;
+  left: -10px;
+  top: 28px;
+  border: 1px solid rgb(204, 204, 204);
+  padding: 3px;
+}
+
+/* 中间的上部分 */
+.middle-one {
+  height: 140px;
+  position: relative;
+  
+}
+
+.logo {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+}
+
+.logo a {
+  display: block;
+  width: 190px;
+  height: 170px;
+  background: url(../img/logo.jpg);
+
+}
+.search {
+  width: 560px;
+  height: 36px;
+  position: absolute;
+  top: 25px;
+  left: 320px;
+}
+
+.search input {
+  width: 430px;
+  height: 34px;
+  border: 1px solid rgb(225, 37, 27);
+  float: left;
+  font-size: 12px;
+  padding-left: 17px;
+  padding-right: 44px;
+}
+.search a i {
+  color: rgb(159, 159, 159);
+  font-size: 20px;
+  position: relative;
+  left: 460px;
+  top: -28px;
+}
+.search button {
+  border: 0px;
+  float: left;
+  background-color: rgb(225, 37, 27);
+  width: 50px;
+  height: 36px;
+
+}
+
+.search button i {
+  color: rgb(255, 255, 255);
+}
+
+.shopcar {
+  width: 180px;
+  height: 34px;
+  border: 1px solid rgb(238, 238, 238);
+  line-height: 34px;
+  position: absolute;
+  top: 25px;
+  right: 100px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  color: rgb(225, 37, 27);
+}
+
+.shopcar i {
+  color: rgb(225, 37, 27);
+  margin-right: 5px;
+  
+}
+
+
+.shopcar a {
+
+  color: rgb(225, 37, 27);
+  font-size: 12px;
+}
+
+.shopcar span {
+  width: 15px;
+  height: 15px;
+  background-color: rgb(225, 37, 27);
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  line-height: 15px;
+ 
+}
+.second-nav {
+  position: absolute;
+  top: 68px;
+  left: 320px;
+}
+.second-nav a {
+
+  color:rgb(153, 153, 153);
+  font-size: 12px;
+  
+}
+
+.second-nav a:nth-child(1){
+  color: rgb(225, 37, 27);
+}
+
+.third-nav {
+  width: 650px;
+  height: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 250px;
+  line-height: 20px;
+}
+
+.third-nav li {
+  float: left;
+  margin-right: 20px;
+}
+
+.third-nav li a {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(80, 90, 95);
+  font-weight: bold;
+}
+
+.third-nav li a:hover {
+  color: rgb(225, 37, 27);
+}
+.third-nav .line {
+  margin-right: 18px;
+  margin-top: 5px;
+  margin-left: -5px;
+  background-color: rgb(204, 204, 204);
+}
+
+.computer-sell {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+}
+
+/* 页面中间 */
+.col-three {
+  height: 480px;
+}
+.col1 {
+  float: left;
+  width: 190px;
+  height: 100%;
+  background-color: rgb(110, 101, 104);
+  font-size: 14px;
+
+}
+.col1 ul {
+  padding: 10px 0;
+  color: rgb(255, 255, 255);
+}
+.col1 ul li {
+  padding-left: 12px;
+  height: 29px;
+  line-height: 26px;
+  
+}
+
+.col1 ul li:hover {
+  background-color: #aaa;
+}
+
+.col1 ul li a {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  margin:0 3px;
+}
+
+.col1 ul li a:hover {
+  color: rgb(200, 22, 35);
+}
+.col2 {
+  float: left;
+  width: 790px;
+  height: 100%;
+  margin-left: 10px;
+}
+.col2-buttom div {
+  float: left;
+  margin-top: 10px;
+}
+
+.col2-buttom div:nth-child(2) {
+  float: right;
+  margin-top: 10px;
+}
+
+.col2-buttom div img {
+  width: 390px;
+  height: 130px;
+}
+
+/* banner的切换 */
+.col2-top {
+  position: relative;
+}
+.to-left, .to-right {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: 60px;
+  transform: translateY(-50%);
+  text-align: center;
+  line-height: 60px;
+  background: rgba(0, 0, 0, .3);
+  color: rgb(246, 248, 250);
+  right: 0px;
+  transform:translateY(-50%) ;
+}
+.to-right {
+  left: 0px;
+}
+
+.to-left i, .to-right i {
+  font-size: 30px;
+
+
+}
+.order {
+  width: 167px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, .3);
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  padding-left: 8px;
+}
+
+.order li {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  float: left;
+  margin: 4px;
+  cursor: pointer;
+
+}
+.order li:nth-child(1) {
+  color: rgb(241, 2, 21) ;
+}
+.col3 {
+  float: right;
+  width: 190px;
+  height: 100%;
+  
+}
+.ad1 {
+  height: 85px;
+  border-bottom: 1px solid rgb(242, 242, 242);
+  padding: 15px;
+  
+  
+}
+.login {
+  width: 95px;
+  height: 60px;
+  line-height: 20px;
+  font-size: 10px;
+  color: rgb(102, 102, 102);
+  padding-left: 60px;
+  position: relative;
+}
+
+.login a {
+  color: rgb(51, 51, 51);
+}
+
+.login a:hover {
+  color: rgb(200, 22, 35);
+}
+.no-login {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.no-login img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.login-oth a{
+  display: inline-block;
+  width: 70px;
+  height: 20px;
+  line-height: 20px;
+  border: 2px solid rgb(225, 37, 27);
+  margin-right: 3px;
+  text-align: center ;
+  color: rgb(225, 37, 27);
+  font-size: 12px;
+}
+
+
+
+.ad2 {
+  height: 154px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  background: rgb(255, 255, 255);
+  padding: 7px 13px 0px;
+  box-sizing: border-box;
+}
+.ad2-f {
+  height: 19px;
+  border-bottom: 1px solid rgb(238, 238, 238);
+  position: relative;
+}
+.ad2-f a {
+  float: left;
+  height: 17px;
+  line-height: 17px;
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+
+}
+
+.ad2-f div {
+  height: 2px;
+  width: 28px;
+  background-color: rgb(225, 37, 27);
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+}
+
+.sell {
+  width: 38px;
+  border-right: 1px solid rgb(238, 238, 238);
+}
+
+.board {
+  margin-left: 15px;
+}
+.ad2-f .more {
+  float: right;
+}
+
+.ad2-s {
+  padding-top: 15px;
+}
+.ad2-s li {
+  height: 23px;
+  line-height: 23px;
+  font-size: 12px;
+}
+
+.ad2-s a {
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+}
+.ad3 {
+  height: 209px;
+  overflow: hidden;
+
+}
+.ad3 ul {
+  width: 195px;
+}
+
+.ad3 li {
+  width: 47px;
+  height: 69px;
+  border-right: 1px solid rgb(238, 238, 238);
+  border-bottom: 1px solid rgb(238, 238, 238);
+  float: left;
+}
+.ad3 li a {
+  display: block;
+  padding-top: 15px;
+  text-align: center;
+}
+.ad3 li i {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  background: url(../img/sprite_fs@1x.png) no-repeat;
+  width: 20px;
+  height: 23px;
+  background-position: -2px -2px;
+}
+.ad3 li span {
+  font-size: 12px;
+  color: rgb(153, 153, 153);
+}
+/* 页面的底部 */
+footer {
+  /* margin-top: 30px; */
+  height: 540px;
+  background-color: rgb(244, 244, 244);
+  padding-bottom: 100px;
+  
+
+}
+
+.int {
+  padding: 30px 0px;
+  border-bottom: 1px solid rgb(225, 225, 225);
+}
+
+.int ul li {
+  width: 297px;
+  height: 43px;
+  position: relative;
+  line-height: 43px;
+  float: left;
+
+}
+
+.int li h5 {
+  position: absolute;
+  top: -20px;
+  left: 38px;
+  width: 36px;
+  height: 43px;
+  background: url(../img/ico_service.png) no-repeat;
+
+}
+
+.int li:nth-child(2) h5 {
+  background-position: 0 -43px;
+}
+.int li:nth-child(3) h5 {
+  background-position: 0 -86px;
+}
+.int li:nth-child(4) h5 {
+  background-position: 0 -129px;
+}
+.int li p{
+  font-weight: 700;
+  margin-left: 82px;
+  margin-top: 1px;
+}
+
+/* 方式 */
+.way {
+  height: 200px;
+ 
+  border-bottom: 1px solid rgb(225, 225, 225);
+  padding-top: 5px;
+  
+  box-sizing: border-box;
+  
+}
+
+.way dl {
+  width: 192px;
+  float: left;
+
+}
+
+.way dt {
+  height: 30px;
+  color: rgb(102, 102, 102);
+  font-weight: bold;
+  font-size: 14px;
+}
+.left {
+  float: left;
+}
+.left dd {
+  height: 22px;
+
+}
+
+.left a {
+  color: rgb(102, 102, 102);
+  font-size: 12px;
+}
+.right {
+  float: right;
+  width: 200px;
+  height: 150px;
+  background: url(../img/ico_footer.png) no-repeat;
+}
+
+.right h5 {
+  padding-left: 35px;
+  height: 30px;
+  font-size: 14px;
+  color: rgb(102, 102, 102);
+  font-weight: bold;
+}
+
+.right p {
+  font-size: 12px;
+  color: rgb(102, 102, 102);
+  line-height: 18px;
+  width: 180px;
+}
+
+.right a {
+  display: block;
+  margin-top: 5px;
+  width: 180px;
+  text-align: right;
+}
+
+.about {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+ 
+  
+  
+  
+}
+
+.about p a {
+  color: rgb(102, 102, 102);
+  
+}
+
+.about span {
+  margin: 0 10px;
+  
+}
+
+.about div {
+  margin-top: 20px;
+}
+.about div span {
+  margin: 0px;
+}
+.about div p {
+  color: rgb(153, 153, 153);
+  line-height: 12px;
+}
+
+/* 底部的6个图标 */
+.icon a {
+  display: inline-block;
+  width: 103px;
+  height: 33px;
+  background: url(../img/ico_footer.png) no-repeat 0 -150px;
+  margin-top: 10px;
+  margin: 20px 4px 0px;
+
+}
+
+.icon a:nth-child(2) {
+  background-position: -103px -150px;
+}
