@@ -45,6 +45,14 @@ img {
 header {
   height: 80px;
   background-color: rgb(0, 0, 0);
+  position: relative;
+
+}
+
+header a:nth-child(2) {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
 
 }
 
@@ -81,6 +89,7 @@ header {
   float: left;
 
 }
+
 .cho li a {
   color: rgb(153, 153, 153);
   font-size: 12px;
@@ -104,6 +113,7 @@ header {
   color: rgb(241, 2, 21);
 
 }
+
 .cho i {
   color: rgb(153, 153, 153);
   margin-top: 20px;
@@ -135,6 +145,7 @@ header {
   position: absolute;
   top: -30px;
   left: 0px;
+  box-shadow: 0px -9px 9px rgba(0, 0, 0, .3);
 
 }
 
@@ -299,23 +310,24 @@ header {
 
 .side {
   position: relative;
-  
+
 }
+
 .left-img {
-  /* background-position:  ; */
   background: url(../img/bg.png) no-repeat;
   position: absolute;
-  background-position: -340px;
+  background-position: -330px;
   height: 500px;
-  width: 360px;
+  width: 36px;
   display: block;
   left: -36px;
 }
 
 .right-img {
+  background: url(../img/bg.png) no-repeat;
   position: absolute;
-  background-position: 400px;
-  height: 480px;
+  background-position: -1555px;
+  height: 500px;
   width: 36px;
   display: block;
   left: 1190px;
@@ -420,7 +432,7 @@ header {
 }
 
 .order {
-  width: 167px;
+  width: 165px;
   height: 20px;
   background-color: rgba(255, 255, 255, .3);
   position: absolute;
@@ -428,7 +440,7 @@ header {
   bottom: 20px;
   transform: translateX(-50%);
   border-radius: 10px;
-  padding-left: 8px;
+  padding-left: 4px;
 
 }
 
@@ -443,8 +455,8 @@ header {
 
 }
 
-.order li:nth-child(1) {
-  color: rgb(241, 2, 21) ;
+.col2 .order li:nth-child(1) {
+  background-color: rgb(241, 2, 21) ;
 
 }
 
@@ -458,7 +470,7 @@ header {
 .ad1 {
   height: 85px;
   border-bottom: 1px solid rgb(242, 242, 242);
-  padding: 15px;
+  padding: 10px;
 
 }
 
@@ -473,6 +485,10 @@ header {
 
 }
 
+.login p {
+  margin: 0px;
+}
+
 .login a {
   color: rgb(51, 51, 51);
 
@@ -484,16 +500,16 @@ header {
 }
 
 .no-login {
-  width: 50px;
-  height: 50px;
   position: absolute;
+  width: 51px;
+  height: 51px;
   left: 0px;
   top: 0px;
 
 }
 
 .no-login img {
-  width: 100%;
+  width: 80%;
   border-radius: 50%;
 
 }
@@ -732,6 +748,8 @@ footer {
   font-size: 14px;
   color: rgb(102, 102, 102);
   font-weight: bold;
+  margin-top: 18px;
+  margin-bottom: 0px;
 
 }
 
@@ -740,6 +758,8 @@ footer {
   color: rgb(102, 102, 102);
   line-height: 18px;
   width: 180px;
+  margin: 5px 0px 0px;
+
 
 }
 
@@ -748,6 +768,8 @@ footer {
   margin-top: 5px;
   width: 180px;
   text-align: right;
+  color: rgb(102, 102, 102);
+  font-size: 12px;
 
 }
 
