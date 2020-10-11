@@ -1,0 +1,156 @@
+{
+  "id": "2014746",
+  "name": "web",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "17544805",
+      "name": "向左",
+      "font_class": "xiangzuo-copy",
+      "unicode": "ecc8",
+      "unicode_decimal": 60616
+    },
+    {
+      "icon_id": "14095247",
+      "name": "向左",
+      "font_class": "xiangzuo",
+      "unicode": "e77a",
+      "unicode_decimal": 59258
+    },
+    {
+      "icon_id": "10622228",
+      "name": "购物车",
+      "font_class": "dilanxianxingiconyihuifu_huabanfuben",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "12323762",
+      "name": "下拉",
+      "font_class": "xiala",
+      "unicode": "e656",
+      "unicode_decimal": 58966
+    },
+    {
+      "icon_id": "11372721",
+      "name": "相机",
+      "font_class": "xiangji",
+      "unicode": "e8bc",
+      "unicode_decimal": 59580
+    },
+    {
+      "icon_id": "16483299",
+      "name": "点击",
+      "font_class": "icon_xinyong_xianxing_jijin-160",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "400083",
+      "name": "定位",
+      "font_class": "htmal5icon14",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "17541986",
+      "name": "定位",
+      "font_class": "htmal5icon14-copy",
+      "unicode": "ecc7",
+      "unicode_decimal": 60615
+    },
+    {
+      "icon_id": "11174103",
+      "name": "左向1",
+      "font_class": "zuoxiang",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "17541005",
+      "name": "左向1",
+      "font_class": "zuoxiang-copy",
+      "unicode": "ecc2",
+      "unicode_decimal": 60610
+    },
+    {
+      "icon_id": "17541006",
+      "name": "左向1",
+      "font_class": "zuoxiang-copy-copy",
+      "unicode": "ecc3",
+      "unicode_decimal": 60611
+    },
+    {
+      "icon_id": "17541009",
+      "name": "左向1",
+      "font_class": "zuoxiang-copy-copy1",
+      "unicode": "ecc4",
+      "unicode_decimal": 60612
+    },
+    {
+      "icon_id": "17541010",
+      "name": "左向1",
+      "font_class": "zuoxiang-copy-copy-copy",
+      "unicode": "ecc5",
+      "unicode_decimal": 60613
+    },
+    {
+      "icon_id": "17541271",
+      "name": "左向1",
+      "font_class": "zuoxiang-copy-copy2",
+      "unicode": "ecc6",
+      "unicode_decimal": 60614
+    },
+    {
+      "icon_id": "16513270",
+      "name": "左",
+      "font_class": "zuo",
+      "unicode": "e66c",
+      "unicode_decimal": 58988
+    },
+    {
+      "icon_id": "1447728",
+      "name": "声音",
+      "font_class": "shengyin",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "11749367",
+      "name": "电池",
+      "font_class": "dianchi",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "15685288",
+      "name": "蓝牙",
+      "font_class": "lanya",
+      "unicode": "e6d9",
+      "unicode_decimal": 59097
+    },
+    {
+      "icon_id": "348997",
+      "name": "twitter",
+      "font_class": "twitter",
+      "unicode": "ecc1",
+      "unicode_decimal": 60609
+    },
+    {
+      "icon_id": "14401700",
+      "name": "facebook",
+      "font_class": "facebook",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "1467351",
+      "name": "github",
+      "font_class": "github1",
+      "unicode": "e692",
+      "unicode_decimal": 59026
+    }
+  ]
+}
