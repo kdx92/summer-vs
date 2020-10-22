@@ -44,25 +44,36 @@ var submit = document.getElementById("button");
 // }
 var position = document.getElementsByClassName("licontent");
 submit.onclick = function() {
-  // console.log(position.length);
+  // console.log(position);
   var info = word.value;
   if(info != "") {
     console.log(info);
-    for(i = 0 ; i < position.length; i++ ) {
-    var index = position[i];
-    if(index.innerHTML=="") {
+    for(var i = 0 ; i < position.length; i++ ) {
+      var index = position[i];
+      console.log(i);
+      console.log(position[1].innerHTML);
+    
+      if(index.innerHTML=="") {
       console.log(index.innerHTML);
       index.innerHTML = word.value;
-      index.style.border = "1px solid #000";
-      index.style.padding = "5px 8px";
-      console.log(index.innerHTML);
       word.value = "";
+      if(index.innerHTML!=""){
+        index.style.border = "1px solid red";
+      index.style.padding = "5px 8px";
+      index.style.display = "inline-block";
+      index.style.width = "100px";
+      index.style.height = "30px";
+      }
+      
+  
+
+      
 
 
     }
 
-    return;
+    // return;
   }
-
+  return;
 }
 };

@@ -134,14 +134,16 @@ li {
 }
 
 .words ul li {
-  width: 149px;
-  height: 69px;
+  width: 122px;
+  height: 44px;
+  /* width: 109px;
+  height: 39px; */
   border: 1px solid #000;
   float: left;
   margin: 0 0 -1px -1px;
   text-align: center;
-  line-height: 69px;
-  /* padding: 5px 10px; */
+  line-height: 44px;
+  padding: 12px 13px;
   /* border: 1px solid rgb(57, 168, 228); */
   
 }
