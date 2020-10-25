@@ -120,7 +120,7 @@ li {
   
   width: 300px;
   height: 210px;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
   position: absolute;
   top: 220px;
   left: 40px;
@@ -138,7 +138,7 @@ li {
   height: 44px;
   /* width: 109px;
   height: 39px; */
-  border: 1px solid #000;
+  border: 1px solid #fff;
   float: left;
   margin: 0 0 -1px -1px;
   text-align: center;
@@ -148,6 +148,9 @@ li {
   
 }
 
+.words ul li span {
+  line-height: 30px;
+}
 /* * {
     margin: 0;
     padding: 0;

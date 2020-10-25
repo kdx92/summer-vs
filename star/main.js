@@ -58,11 +58,12 @@ submit.onclick = function() {
       index.innerHTML = word.value;
       word.value = "";
       if(index.innerHTML!=""){
-        index.style.border = "1px solid red";
+        index.style.border = "1px solid #ccc";
       index.style.padding = "5px 8px";
       index.style.display = "inline-block";
       index.style.width = "100px";
       index.style.height = "30px";
+      
       }
       
   
