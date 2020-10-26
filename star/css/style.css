@@ -42,11 +42,49 @@ li {
   left: 40px;
   top: 40px;
   width: 90%;
+
 }
-.stars img {
+.stars a img {
   width: 90px;
   border-radius: 50%;
 
+}
+/* 星星的位置 */
+/* #frm{
+  float: left;
+  border: 2px solid #aaa;
+  padding:10px;
+  border-radius: 8px;
+} */
+
+.score{
+  width: 40px;
+  height: 40px;
+  margin:0;
+  float: left;
+}
+.vote{
+  position: absolute;
+  clear: left;
+  top: 27px;
+  left: 100px;
+}
+
+.vote img {
+
+  background-image: url(../img/star.png);
+  background-position: 0px 40px;
+  width: 40px;
+  height: 40px;
+  background-size: 40px 80px;
+  
+}
+
+.vote label {
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  color: #aaa;
 }
 
 .impress {
