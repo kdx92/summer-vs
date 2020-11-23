@@ -9,9 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.atguigu</groupId>
-    <artifactId>spring-boot-04-web-restfulcrud</artifactId>
+    <artifactId>spring-boot-04-web-jsp</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-04-web-restfulcrud</name>
+    <packaging>war</packaging>
+    <name>spring-boot-04-web-jsp</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -24,34 +25,11 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-<!--引入其他的Servlet容器-->
-<!--        实现不了切换jetty-->
-<!--        <dependency>-->
-<!--            <artifactId>spring-boot-starter-jetty</artifactId>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-
-<!--        </dependency>-->
-
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
         </dependency>
-
-<!--        引入jquery-webjar-->
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery</artifactId>
-            <version>3.5.1</version>
-        </dependency>
-   <!--引入bootstrap-->
-
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>4.5.3</version>
-        </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

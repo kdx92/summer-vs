@@ -2,11 +2,16 @@ package com.atguigu.springboot.config;
 
 import com.atguigu.springboot.component.LoginHandlerInterceptor;
 import com.atguigu.springboot.component.MyLocaleResolver;
+import org.springframework.boot.autoconfigure.web.embedded.EmbeddedWebServerFactoryCustomizerAutoConfiguration;
+import org.springframework.boot.web.server.ConfigurableWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.*;
 
+import java.awt.*;
 import java.util.Locale;
 
 //使用WebMvcConfigurerAdapter可以扩展SpringMVC的功能
@@ -23,6 +28,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
 //        registry.addViewController("/atguigu").setViewName("login");
 //
 //    }
+
 
 //    所有的WebMvcConfigurerAdapter组件都会一起起作用
 // 将组件注册在容器
