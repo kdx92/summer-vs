@@ -20,6 +20,7 @@
         <button class="layui-btn layui-btn-sm" lay-event="getCheckData">获取选中行数据</button>
         <button class="layui-btn layui-btn-sm" lay-event="getCheckLength">获取选中数目</button>
         <button class="layui-btn layui-btn-sm" lay-event="isAll">验证是否全选</button>
+        <button class="layui-btn layui-btn-sm" lay-event="add">添加</button>
     </div>
 </script>
 <script type="text/html" id="barDemo">
@@ -30,33 +31,36 @@
 
 
 <script>
+    var $,table;
     layui.use('table', function(){
         var table = layui.table;
+        $ = layui.jquery;
 
         //温馨提示：默认由前端自动合计当前行数据。从 layui 2.5.6 开始： 若接口直接返回了合计行数据，则优先读取接口合计行数据。
         //详见：https://www.layui.com/doc/modules/table.html#totalRow
         table.render({
             elem: '#test'
-            ,url:'/test/table/demo1.json'
+            ,url:'/prodorder/listJson'
             ,toolbar: '#toolbarDemo'
             ,title: '用户数据表'
             ,totalRow: true
             ,cols: [
                 [
                 {type: 'checkbox', fixed: 'left'}
-                ,{field:'id', title:'ID', width:80, fixed: 'left', unresize: true, sort: true, totalRowText: '合计'}
-                ,{field:'username', title:'名字', width:120, edit: 'text'}
-                ,{field:'username', title:'用户名', width:120, edit: 'text'}
-                ,{field:'username', title:'微信备注', width:120, edit: 'text'}
-                ,{field:'username', title:'微信ID', width:120, edit: 'text'}
-                ,{field:'username', title:'QQ号', width:120, edit: 'text'}
-                ,{field:'username', title:'购买商品', width:120, edit: 'text'}
-                ,{field:'username', title:'价格', width:120, edit: 'text'}
-                ,{field:'username', title:'订单日期', width:120, edit: 'text'}
+                // ,{field:'id', title:'ID', width:80, fixed: 'left', unresize: true, sort: true, totalRowText: '合计'}
+                ,{field:'name', title:'用户名', width:120}
+                ,{field:'wechat_mark', title:'微信备注', width:120}
+                ,{field:'wechat_no', title:'微信ID', width:120}
+                ,{field:'qq_no', title:'QQ号', width:120}
+                ,{field:'prod_name', title:'购买商品', width:120}
+                ,{field:'prod_price', title:'价格', width:120}
+                ,{field:'order_date', title:'订单日期', width:120}
                 ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
             ]
             ]
             ,page: true
+            ,limit:7
+            ,limits:[7,8,9,10]
         });
 
         //工具栏事件
@@ -74,7 +78,83 @@
                 case 'isAll':
                     layer.msg(checkStatus.isAll ? '全选': '未全选')
                     break;
+                case 'add':
+                    //layer.msg('弹出添加页面');
+                    parent.layer.open({
+                        type:2,//2跳转到页面
+                        offset: 'auto',
+                        title:'添加课程订单',
+                        content:'/prodorder/add',
+                        area: ['1000px', '600px'],
+                        btn:'关闭全部',
+                        btnAlign:'c',
+                        yes:function () {
+                            parent.layer.closeAll();
+                        }
+                    });
+                    break;
+
             };
+        });
+
+    //    监听双击事件
+        table.on('rowDouble(test)' ,function (obj) {
+            var orderId = obj.data.order_id;
+            // console.log(orderID);
+
+
+            parent.layer.open({
+                type:2,//2跳转到页面
+                offset: 'auto',
+                title:'商品订单详情',
+                content:'/prodorder/detail?order_id'+orderId,
+                area: ['1000px', '600px'],
+                btn:'关闭全部',
+                btnAlign:'c',
+                yes:function () {
+                    parent.layer.closeAll();
+                }
+            });
+
+
+        });
+
+        //监听工具条
+        table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+            var orderId = obj.data.order_id; //获得order_id
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+
+            if(layEvent === 'del'){ //删除
+                layer.confirm('真的删除行么', function(index){
+                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                    layer.close(index);
+
+                    //向服务端发送删除指令,jqery.get
+                    $.get("/prodorder/delete",{order_id:orderId},function (respData) {
+                        console.log(respData);
+                        //console.log(resp);
+                        if(respData.success == 1){
+                            layer.msg("删除成功");
+                        }else{
+                            layer.msg("删除失败" + resp.message);
+                        }
+                    })
+                });
+            } else if(layEvent === 'edit'){ //编辑
+                //弹出编辑页面
+                parent.layer.open({
+                    type:2,//2跳转到页面
+                    offset: 'auto',
+                    title:'修改商品订单',
+                    content:'/prodorder/edit?order_id='+orderId,
+                    area: ['1000px', '600px'],
+                    btn:'关闭全部',
+                    btnAlign:'c',
+                    yes:function () {
+                        parent.layer.closeAll();
+                    }
+                });
+            }
         });
     });
 </script>

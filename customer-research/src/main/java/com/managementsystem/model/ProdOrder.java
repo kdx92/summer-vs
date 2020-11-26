@@ -72,19 +72,19 @@ public class ProdOrder {
         this.tel = tel;
     }
 
-    public String getProd_name() {
+    public String getCourse_name() {
         return prod_name;
     }
 
-    public void setProd_name(String prod_name) {
+    public void setCourse_name(String course_name) {
         this.prod_name = prod_name;
     }
 
-    public String getProd_price() {
+    public String getCourse_price() {
         return prod_price;
     }
 
-    public void setProd_price(String prod_price) {
+    public void setCourse_price(String course_price) {
         this.prod_price = prod_price;
     }
 
@@ -110,5 +110,23 @@ public class ProdOrder {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    @Override
+    public String toString() {
+        return "ProdOrder{" +
+                "uuid='" + uuid + '\'' +
+                ", order_id='" + order_id + '\'' +
+                ", name='" + name + '\'' +
+                ", wechat_no='" + wechat_no + '\'' +
+                ", wechat_mark='" + wechat_mark + '\'' +
+                ", qq_no='" + qq_no + '\'' +
+                ", tel='" + tel + '\'' +
+                ", prod_name='" + prod_name + '\'' +
+                ", prod_price='" + prod_price + '\'' +
+                ", order_date='" + order_date + '\'' +
+                ", update_datetime=" + update_datetime +
+                ", remark='" + remark + '\'' +
+                '}';
     }
 }
