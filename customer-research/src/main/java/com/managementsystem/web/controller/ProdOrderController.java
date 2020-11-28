@@ -76,8 +76,9 @@ public class ProdOrderController {
 
     @RequestMapping("listJson")
     @ResponseBody
-    public PageResult<ProdOrder> listJson(int page,int limit){
-        PageResult<ProdOrder> result= orderService.findPageResult(null,page,limit);
+    public PageResult<ProdOrder> listJson(ProdOrder condition, int page,int limit){
+        System.out.println(condition);
+        PageResult<ProdOrder> result= orderService.findPageResult(condition,page,limit);
 
         return result;
     }

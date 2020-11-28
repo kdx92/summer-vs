@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.managementsystem.mapper.ProdOrderMapper">
-
+<!--SQL片段拼接-->
+    <sql id="search_where">
+        <where>
+            <if test="condition.wechat_no != null and condition.wechat_no !=''">
+                wechat_no like '%${condition.wechat_no}%'
+            </if>
+            <if test="condition.wechat_mark != null and condition.wechat_mark !=''">
+                and wechat_mark like '%${condition.wechat_mark}%'
+            </if>
+            <if test="condition.qq_no != null and condition.qq_no !=''">
+                and qq_no like '%${condition.qq_no}%'
+            </if>
+        </where>
+    </sql>
     <select id="findCountByMap" parameterType="map" resultType="int">
       select count(*) from t_course_order
+        <include refid="search_where"></include>
     </select>
 
     <select id="findListByMap" parameterType="map" resultType="prodOrder">
         select * from t_course_order
+        <include refid="search_where"></include>
         order by order_date desc limit #{start},#{pageSize};
     </select>
 
@@ -40,5 +55,14 @@
        WHERE
           order_id = #{order_id}
     </update>
+
+    <select id="getMonthIncomes" resultType="monthIncome">
+        SELECT
+        LEFT(order_date,7) as date,
+        count(*) as total,
+        SUM(convert(course_price,decimal(18,2))) as income
+        from t_course_order
+        GROUP BY LEFT(order_date,7);
+    </select>
 </mapper>
 

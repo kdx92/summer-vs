@@ -1,6 +1,7 @@
 package com.managementsystem.service.impl;
 
 import com.managementsystem.mapper.ProdOrderMapper;
+import com.managementsystem.model.MonthIncome;
 import com.managementsystem.model.PageResult;
 import com.managementsystem.model.ProdOrder;
 import com.managementsystem.service.ProdOrderService;
@@ -26,6 +27,8 @@ public class ProdOrderServiceImpl implements ProdOrderService {
          */
         Map<String,Object> params = new HashMap<String,Object>();
 //        select * from 表 limit 0,10
+        params.put("condition",condition);
+//        模糊查询条件
         params.put("start",(page-1) * pageSize);
         params.put("pageSize",pageSize);
 //        获取总记录数据
@@ -58,5 +61,10 @@ public class ProdOrderServiceImpl implements ProdOrderService {
     public void update(ProdOrder order) {
         orderMapper.update(order);
 
+    }
+
+    @Override
+    public List<MonthIncome> getMonthIncomes() {
+        return orderMapper.getMonthIncomes();
     }
 }

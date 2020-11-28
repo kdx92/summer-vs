@@ -1,5 +1,6 @@
 package com.managementsystem.mapper;
 
+import com.managementsystem.model.MonthIncome;
 import com.managementsystem.model.ProdOrder;
 //import com.gyf.szcrm.model.MonthIncome;
 import com.managementsystem.model.ProdOrder;
@@ -25,6 +26,8 @@ public interface ProdOrderMapper {
     public void deleteByOrderId(String order_id);
 
     public void update(ProdOrder order);
+
+    public List<MonthIncome> getMonthIncomes();
 //
 //    public void update(ProdOrder order);
 

@@ -12,6 +12,34 @@
     <!-- 注意：如果你直接复制所有代码到本地，上述css路径需要改成你本地的 -->
 </head>
 <body>
+<br>
+<form class="layui-form" action="" id="searchForm">
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">WeChat号</label>
+            <div class="layui-input-inline">
+                <input type="text" name="wechat_no" id="wechat_no" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">WeChat备注</label>
+            <div class="layui-input-inline">
+                <input type="text" name="wechat_mark" id="wechat_mark" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+        <div class="layui-inline">
+            <label class="layui-form-label">QQ</label>
+            <div class="layui-input-inline">
+                <input type="text" name="qq_no"  id="qq_no" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+
+        <div class="layui-inline">
+            <button type="button" onclick="doSearch();" class="layui-btn layui-btn-sm">Search</button>
+            <button type="reset" class="layui-btn layui-btn-sm">Reset</button>
+        </div>
+    </div>
+</form>
 
 <table class="layui-hide" id="test" lay-filter="test"></table>
 
@@ -24,8 +52,8 @@
     </div>
 </script>
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+    <a class="layui-btn layui-btn-xs" lay-event="edit">搜索</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">返回</a>
 </script>
 
 
@@ -33,7 +61,7 @@
 <script>
     var $,table;
     layui.use('table', function(){
-        var table = layui.table;
+        table = layui.table;
         $ = layui.jquery;
 
         //温馨提示：默认由前端自动合计当前行数据。从 layui 2.5.6 开始： 若接口直接返回了合计行数据，则优先读取接口合计行数据。
@@ -61,6 +89,7 @@
             ,page: true
             ,limit:7
             ,limits:[7,8,9,10]
+            ,id:'orderTable'
         });
 
         //工具栏事件
@@ -157,6 +186,23 @@
             }
         });
     });
+    function doSearch() {
+    //    通过Jquery获取参数
+        var wechat_no = $("#wechat_no").val();
+        var wechat_mark = $("#wechat_mark").val();
+        var qq_no = $("#qq_no").val();
+
+    //    table.reaload方法，附加上搜索条件
+        table.reload('orderTable', {
+            where: {//附加额外的参数
+                wechat_no:wechat_no,
+                wechat_mark:wechat_mark,
+                qq_no:qq_no
+            },page: {
+                curr: 1 //重新从第 1 页开始
+            }
+        });
+    }
 </script>
 
 </body>
