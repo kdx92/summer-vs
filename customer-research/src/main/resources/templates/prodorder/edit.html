@@ -55,9 +55,9 @@
             <div class="layui-input-inline">
                 <select  name="prod_name" id="prod_name">
                     <option value="">直接选择或搜索选择</option>
-                    <option value="2018-Java全套课程">2018-Java全套课程</option>
-                    <option value="2019-Swing从入门到实战">2019-Swing从入门到实战</option>
-                    <option value="2019-SpringBoot后台CRM项目">2019-SpringBoot后台CRM项目</option>
+                    <option th:each="category : ${categoryList}"
+                            th:value="${category.prod_name}"
+                            th:text="${category.prod_name}"></option>
                 </select>
             </div>
         </div>

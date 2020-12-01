@@ -19,8 +19,6 @@ public interface ProdOrderMapper {
 
     void insert(ProdOrder order);
 
-//    public ProdOrder findByOrderId(String order_id);
-
     public ProdOrder findByOrderId(String order_id);
 
     public void deleteByOrderId(String order_id);
@@ -28,8 +26,5 @@ public interface ProdOrderMapper {
     public void update(ProdOrder order);
 
     public List<MonthIncome> getMonthIncomes();
-//
-//    public void update(ProdOrder order);
 
-//    public List<MonthIncome> getMonthIncomes();
 }

@@ -15,43 +15,46 @@
             </if>
         </where>
     </sql>
+
     <select id="findCountByMap" parameterType="map" resultType="int">
-      select count(*) from t_course_order
+      select count(*) from t_prod_order
         <include refid="search_where"></include>
     </select>
 
     <select id="findListByMap" parameterType="map" resultType="prodOrder">
-        select * from t_course_order
+        select * from t_prod_order
         <include refid="search_where"></include>
         order by order_date desc limit #{start},#{pageSize};
     </select>
 
     <insert id="insert" parameterType="prodOrder">
-       INSERT INTO t_course_order
-      (uuid,order_id,name,wechat_no,wechat_mark,
-       qq_no,tel,course_name,course_price,order_date,
-       update_datetime,remark)
+       INSERT INTO t_prod_order
+      (uuid,order_id,name,wechat_no,tel,
+      prod_name,prod_price,num,order_date,
+       update_datetime)
     VALUES
-      (UUID(), UUID(), #{name}, #{wechat_no},#{wechat_mark},
-      #{qq_no}, #{tel}, #{course_name},
-      #{course_price},#{order_date},
-      CURRENT_TIMESTAMP(),#{remark});
+      (UUID(), UUID(), #{name}, #{wechat_no},#{tel},
+      #{prod_name}, #{prod_price},#{name}
+      #{order_date},
+      CURRENT_TIMESTAMP());
     </insert>
 
     <select id="findByOrderId" parameterType="string" resultType="prodOrder">
-        select * from t_course_order where order_id = #{order_id};
+        select * from t_prod_order where order_id = #{order_id};
     </select>
 
     <delete id="deleteByOrderId" parameterType="string">
-        DELETE FROM t_course_order where order_id = #{order_id};
+        DELETE FROM t_prod_order where order_id = #{order_id};
     </delete>
 
     <update id="update" parameterType="prodOrder">
-          UPDATE t_course_order SET name = #{name},wechat_no = #{wechat_no},
-          wechat_mark = #{wechat_mark},qq_no = #{qq_no},
-          tel = #{tel},course_name = #{prod_name},
-          course_price = #{prod_price},order_date = #{order_date},
-          remark = #{remark}
+          UPDATE t_prod_order SET name = #{name},
+          wechat_no = #{wechat_no},
+          tel = #{tel},
+          prod_name = #{prod_name},
+          prod_price = #{prod_price},
+          wechat_no = #{wechat_no},
+          num = #{num},
        WHERE
           order_id = #{order_id}
     </update>
@@ -60,8 +63,8 @@
         SELECT
         LEFT(order_date,7) as date,
         count(*) as total,
-        SUM(convert(course_price,decimal(18,2))) as income
-        from t_course_order
+        SUM(convert(prod_price,decimal(18,2))) as income
+        from t_prod_order
         GROUP BY LEFT(order_date,7);
     </select>
 </mapper>

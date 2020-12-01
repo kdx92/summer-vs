@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Signin Template for Bootstrap</title>
+	<!-- Bootstrap core CSS -->
+<!--	<link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.5.3/css/bootstrap.css}"  rel="stylesheet">-->
+	<!-- Custom styles for this template -->
+	<link href="../static/css/style.css" th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body class="text-center">
+<form th:action="@{/login}" method="get">
+	<div class="form-wrapper">
+		<div class="header">
+			login
+		</div>
+		<div class="input-wrapper">
+			<div class="border-wrapper">
+				<input type="text" name="username" placeholder="username" class="border-item">
+			</div>
+			<div class="border-wrapper">
+				<input type="password" name="password" placeholder="password" class="border-item">
+			</div>
+		</div>
+		<div class="action">
+			<div class="btn">action</div>
+		</div>
+	</div>
+</form>
+
+</body>
+
+</html>

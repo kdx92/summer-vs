@@ -16,27 +16,27 @@
 <form class="layui-form" action="" id="searchForm">
     <div class="layui-form-item">
         <div class="layui-inline">
-            <label class="layui-form-label">WeChat号</label>
+            <label class="layui-form-label" style="width: 50px">微信</label>
             <div class="layui-input-inline">
                 <input type="text" name="wechat_no" id="wechat_no" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">WeChat备注</label>
+            <label class="layui-form-label" style="width: 50px">用户名</label>
             <div class="layui-input-inline">
-                <input type="text" name="wechat_mark" id="wechat_mark" autocomplete="off" class="layui-input">
+                <input type="text" name="name" id="name" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">QQ</label>
+            <label class="layui-form-label" style="width: 50px">电话</label>
             <div class="layui-input-inline">
-                <input type="text" name="qq_no"  id="qq_no" autocomplete="off" class="layui-input">
+                <input type="text" name="tel"  id="tel" autocomplete="off" class="layui-input">
             </div>
         </div>
 
-        <div class="layui-inline">
-            <button type="button" onclick="doSearch();" class="layui-btn layui-btn-sm">Search</button>
-            <button type="reset" class="layui-btn layui-btn-sm">Reset</button>
+        <div class="layui-inline" style="margin-left:50px">
+            <button type="button" onclick="doSearch();" class="layui-btn layui-btn-sm">搜索</button>
+            <button type="reset" class="layui-btn layui-btn-sm">重置</button>
         </div>
     </div>
 </form>
@@ -51,9 +51,9 @@
         <button class="layui-btn layui-btn-sm" lay-event="add">添加</button>
     </div>
 </script>
-<script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-xs" lay-event="edit">搜索</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">返回</a>
+<script type="text/html" id="barDemo" >
+    <a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
 </script>
 
 
@@ -75,13 +75,12 @@
             ,cols: [
                 [
                 {type: 'checkbox', fixed: 'left'}
-                // ,{field:'id', title:'ID', width:80, fixed: 'left', unresize: true, sort: true, totalRowText: '合计'}
                 ,{field:'name', title:'用户名', width:120}
-                ,{field:'wechat_mark', title:'微信备注', width:120}
-                ,{field:'wechat_no', title:'微信ID', width:120}
-                ,{field:'qq_no', title:'QQ号', width:120}
-                ,{field:'prod_name', title:'购买商品', width:120}
+                ,{field:'wechat_no', title:'微信', width:120}
+                ,{field:'tel', title:'电话', width:120}
+                ,{field:'prod_name', title:'商品名称', width:120}
                 ,{field:'prod_price', title:'价格', width:120}
+                ,{field:'num', title:'数量', width:120}
                 ,{field:'order_date', title:'订单日期', width:120}
                 ,{fixed: 'right', title:'操作', toolbar: '#barDemo', width:150}
             ]

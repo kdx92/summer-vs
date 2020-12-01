@@ -20,28 +20,13 @@
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">WeChat号</label>
+            <label class="layui-form-label">微信</label>
             <div class="layui-input-inline">
                 <input type="text" name="wechat_no" lay-verify="required" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">WeChat备注</label>
-            <div class="layui-input-inline">
-                <input type="text" name="wechat_mark" lay-verify="required" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-    </div>
-
-    <div class="layui-form-item">
-        <div class="layui-inline">
-            <label class="layui-form-label">QQ</label>
-            <div class="layui-input-inline">
-                <input type="tel" name="qq_no" lay-verify="required" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-inline">
-            <label class="layui-form-label">手机</label>
+            <label class="layui-form-label">电话</label>
             <div class="layui-input-inline">
                 <input type="text" name="tel" lay-verify="required" autocomplete="off" class="layui-input">
             </div>
@@ -50,22 +35,33 @@
 
     <div class="layui-form-item">
         <div class="layui-inline">
-            <label class="layui-form-label">购买课程</label>
+            <label class="layui-form-label">价格</label>
             <div class="layui-input-inline">
-                <select name="prod_name" lay-verify="required" lay-search="">
-                    <option value="">直接选择或搜索选择</option>
-                    <option value="2018-Java全套课程">2018-Java全套课程</option>
-                    <option value="2019-Swing从入门到实战">2019-Swing从入门到实战</option>
-                    <option value="2019-SpringBoot后台CRM项目">2019-SpringBoot后台CRM项目</option>
-                </select>
+                <input type="text" name="prod_price" lay-verify="required" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">购买价格</label>
+            <label class="layui-form-label">数量</label>
             <div class="layui-input-inline">
-                <input type="text" name="prod_price"  autocomplete="off" class="layui-input">
+                <input type="text" name="wechat_no" lay-verify="required" autocomplete="off" class="layui-input">
             </div>
         </div>
+
+    </div>
+
+    <div class="layui-form-item">
+        <div class="layui-inline">
+            <label class="layui-form-label">购买商品</label>
+            <div class="layui-input-inline">
+                <select name="prod_name" lay-verify="required" lay-search="">
+                    <option value="">直接选择或搜索选择</option>
+                    <option th:each="category : ${categoryList}"
+                            th:value="${category.prod_name}"
+                            th:text="${category.prod_name}"></option>
+                </select>
+            </div>
+        </div>
+
         <div class="layui-inline">
             <label class="layui-form-label">购买日期</label>
             <div class="layui-input-inline">
