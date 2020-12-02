@@ -7,16 +7,18 @@ import com.managementsystem.model.ProdOrder;
 import com.managementsystem.service.ProdCategoryService;
 import com.managementsystem.service.ProdOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping("prodorder")
+@RequestMapping("/prodorder")
 public class ProdOrderController {
 
     @Autowired
@@ -29,6 +31,7 @@ public class ProdOrderController {
         return "prodorder/list";
     }
 
+
     @RequestMapping("add")
     public String add(Model model){
 //        读取数据库中的商品类型数据，供页面使用
@@ -37,11 +40,14 @@ public class ProdOrderController {
         return "prodorder/add";
     }
 
+
     @RequestMapping("edit")
     public String edit(Model model,String order_id){
+
         System.out.println("修改订单order_id="+order_id);
         ProdOrder order=orderService.findByOrderId(order_id);
         model.addAttribute("order",order);
+
         List<ProdCategory> categoryList = categoryService.findAllList();
         model.addAttribute("categoryList",categoryList);
         return "prodorder/edit";
@@ -49,9 +55,11 @@ public class ProdOrderController {
 
     @RequestMapping("detail")
     public String detail(Model model, String order_id){
+//        System.out.println(order_id);
+
+        System.out.println(order_id);
         ProdOrder order=orderService.findByOrderId(order_id);
         model.addAttribute("order",order);
-//        System.out.println(order_id);
         return "prodorder/detail";
     }
 
@@ -66,6 +74,7 @@ public class ProdOrderController {
     @RequestMapping("save")
     @ResponseBody
     public CURDResult save(ProdOrder order){
+        System.out.println("biubiubiu");
         CURDResult result=new CURDResult();
         if (order.getOrder_id() == null || order.getOrder_id().length()== 0){
             orderService.save(order);
@@ -75,8 +84,7 @@ public class ProdOrderController {
         }
 
         System.out.println(order);
-
-
+//        System.out.println(order);
         return result;
 
     }

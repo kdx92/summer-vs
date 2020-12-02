@@ -7,11 +7,11 @@
             <if test="condition.wechat_no != null and condition.wechat_no !=''">
                 wechat_no like '%${condition.wechat_no}%'
             </if>
-            <if test="condition.wechat_mark != null and condition.wechat_mark !=''">
-                and wechat_mark like '%${condition.wechat_mark}%'
+            <if test="condition.name != null and condition.name !=''">
+                and name like '%${condition.name}%'
             </if>
-            <if test="condition.qq_no != null and condition.qq_no !=''">
-                and qq_no like '%${condition.qq_no}%'
+            <if test="condition.tel != null and condition.tel !=''">
+                and tel like '%${condition.tel}%'
             </if>
         </where>
     </sql>
@@ -28,15 +28,8 @@
     </select>
 
     <insert id="insert" parameterType="prodOrder">
-       INSERT INTO t_prod_order
-      (uuid,order_id,name,wechat_no,tel,
-      prod_name,prod_price,num,order_date,
-       update_datetime)
-    VALUES
-      (UUID(), UUID(), #{name}, #{wechat_no},#{tel},
-      #{prod_name}, #{prod_price},#{name}
-      #{order_date},
-      CURRENT_TIMESTAMP());
+       INSERT INTO t_prod_order (uuid,order_id,name,wechat_no,tel,prod_name,prod_price,num,order_date,update_datetime) VALUES
+      (UUID(), UUID(), #{name}, #{wechat_no}, #{tel}, #{prod_name}, #{prod_price}, #{num}, #{order_date}, CURRENT_TIMESTAMP());
     </insert>
 
     <select id="findByOrderId" parameterType="string" resultType="prodOrder">
@@ -48,13 +41,7 @@
     </delete>
 
     <update id="update" parameterType="prodOrder">
-          UPDATE t_prod_order SET name = #{name},
-          wechat_no = #{wechat_no},
-          tel = #{tel},
-          prod_name = #{prod_name},
-          prod_price = #{prod_price},
-          wechat_no = #{wechat_no},
-          num = #{num},
+          UPDATE t_prod_order SET name = #{name}, wechat_no = #{wechat_no}, tel = #{tel}, prod_name = #{prod_name}, prod_price = #{prod_price}, wechat_no = #{wechat_no}, num = #{num}, order_date = #{order_date}
        WHERE
           order_id = #{order_id}
     </update>

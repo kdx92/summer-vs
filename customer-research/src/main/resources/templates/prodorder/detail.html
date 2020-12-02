@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
 <head>
     <meta charset="utf-8">
     <title>layui</title>
@@ -16,55 +17,49 @@
         <div class="layui-inline">
             <label class="layui-form-label">姓名</label>
             <div class="layui-input-inline">
-                <input type="text" name="name" th:value="${order.name}" autocomplete="off" class="layui-input">
+                <input type="text" name="name" th:value="${order.name}" readonly="readonly" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">WeChat号</label>
+            <label class="layui-form-label">微信</label>
             <div class="layui-input-inline">
-                <input type="text" name="wechat_no" autocomplete="off" class="layui-input">
+                <input type="text" name="wechat_no" th:value="${order.wechat_no}" readonly="readonly" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">WeChat备注</label>
+            <label class="layui-form-label">电话</label>
             <div class="layui-input-inline">
-                <input type="text" name="wechat_mark" autocomplete="off" class="layui-input">
+                <input type="text" name="tel" th:value="${order.tel}" readonly="readonly" autocomplete="off" class="layui-input">
             </div>
         </div>
     </div>
 
     <div class="layui-form-item">
         <div class="layui-inline">
-            <label class="layui-form-label">QQ</label>
+            <label class="layui-form-label">价格</label>
             <div class="layui-input-inline">
-                <input type="tel" name="qq_no" autocomplete="off" class="layui-input">
+                <input type="tel" name="prod_price" th:value="${order.prod_price}" readonly="readonly" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">手机</label>
+            <label class="layui-form-label">数量</label>
             <div class="layui-input-inline">
-                <input type="text" name="tel" autocomplete="off" class="layui-input">
+                <input type="text" name="num" th:value="${order.num}" readonly="readonly" autocomplete="off" class="layui-input">
             </div>
         </div>
     </div>
 
     <div class="layui-form-item">
         <div class="layui-inline">
-            <label class="layui-form-label">购买课程</label>
+            <label class="layui-form-label">购买商品</label>
             <div class="layui-input-inline">
                 <input type="text" name="prod_name" autocomplete="off" class="layui-input">
             </div>
         </div>
         <div class="layui-inline">
-            <label class="layui-form-label">购买价格</label>
-            <div class="layui-input-inline">
-                <input type="text" name="prod_price" autocomplete="off" class="layui-input">
-            </div>
-        </div>
-        <div class="layui-inline">
             <label class="layui-form-label">购买日期</label>
             <div class="layui-input-inline">
-                <input type="text" name="order_date" id="order_date" lay-verify="date" placeholder="yyyy-MM-dd" autocomplete="off" class="layui-input">
+                <input type="text" name="order_date" th:value="${order.order_date}" readonly="readonly" autocomplete="off" class="layui-input">
             </div>
         </div>
     </div>

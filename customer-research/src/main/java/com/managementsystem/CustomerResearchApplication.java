@@ -2,7 +2,9 @@ package com.managementsystem;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -24,6 +26,10 @@ import java.util.Locale;
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.managementsystem"})
 @MapperScan(basePackages={"com.managementsystem.mapper"})
+//@EnableAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
+
+
+
 public class CustomerResearchApplication {
 
     public static void main(String[] args) {
@@ -38,18 +44,6 @@ public class CustomerResearchApplication {
 //        将密码进行多次的MD5加密
 
     }
-//    @Bean
-//    public ViewResolver myViewReolver(){
-//        return new MyViewResolver();
-//    }
-//
-//    private static class MyViewResolver implements ViewResolver{
-//
-//        @Override
-//        public View resolveViewName(String s, Locale locale) throws Exception {
-//            return null;
-//        }
-//    }
 
 }
 

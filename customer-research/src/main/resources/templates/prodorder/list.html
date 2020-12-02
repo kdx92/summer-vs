@@ -127,16 +127,17 @@
 
     //    监听双击事件
         table.on('rowDouble(test)' ,function (obj) {
+            console.log(obj);
             var orderId = obj.data.order_id;
-            // console.log(orderID);
+            console.log(orderId);
 
 
             parent.layer.open({
                 type:2,//2跳转到页面
                 offset: 'auto',
                 title:'商品订单详情',
-                content:'/prodorder/detail?order_id'+orderId,
-                area: ['1000px', '600px'],
+                content:'/prodorder/detail?order_id='+orderId,
+                area: ['1000px', '500px'],
                 btn:'关闭全部',
                 btnAlign:'c',
                 yes:function () {
@@ -186,17 +187,17 @@
         });
     });
     function doSearch() {
-    //    通过Jquery获取参数
+        //    通过Jquery获取参数
         var wechat_no = $("#wechat_no").val();
-        var wechat_mark = $("#wechat_mark").val();
-        var qq_no = $("#qq_no").val();
+        var name = $("#name").val();
+        var tel = $("#tel").val();
 
-    //    table.reaload方法，附加上搜索条件
+        //    table.reaload方法，附加上搜索条件
         table.reload('orderTable', {
             where: {//附加额外的参数
                 wechat_no:wechat_no,
-                wechat_mark:wechat_mark,
-                qq_no:qq_no
+                name:name,
+                tel:tel
             },page: {
                 curr: 1 //重新从第 1 页开始
             }
