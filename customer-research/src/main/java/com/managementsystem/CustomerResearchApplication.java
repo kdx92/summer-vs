@@ -22,14 +22,12 @@ import java.util.Locale;
 //import java.io.File;
 
 //使用WebMvcConfigurerAdapter可以来扩展SpringMVC的功能
+//@EnableAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
+
 
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.managementsystem"})
 @MapperScan(basePackages={"com.managementsystem.mapper"})
-//@EnableAutoConfiguration(exclude = {SecurityAutoConfiguration.class})
-
-
-
 public class CustomerResearchApplication {
 
     public static void main(String[] args) {

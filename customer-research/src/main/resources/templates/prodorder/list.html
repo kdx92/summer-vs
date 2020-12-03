@@ -130,22 +130,18 @@
             console.log(obj);
             var orderId = obj.data.order_id;
             console.log(orderId);
-
-
             parent.layer.open({
                 type:2,//2跳转到页面
                 offset: 'auto',
                 title:'商品订单详情',
                 content:'/prodorder/detail?order_id='+orderId,
-                area: ['1000px', '500px'],
+                area: ['1000px', '550px'],
                 btn:'关闭全部',
                 btnAlign:'c',
                 yes:function () {
                     parent.layer.closeAll();
                 }
             });
-
-
         });
 
         //监听工具条
@@ -154,7 +150,7 @@
             var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
 
             if(layEvent === 'del'){ //删除
-                layer.confirm('真的删除行么', function(index){
+                layer.confirm('确定删除？', function(index){
                     obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
                     layer.close(index);
 

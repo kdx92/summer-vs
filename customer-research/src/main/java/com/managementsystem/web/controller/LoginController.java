@@ -11,11 +11,12 @@ import java.util.Map;
 public class LoginController {
 
 //    @RequestMapping("login")
-        @RequestMapping(value = "login",method = RequestMethod.GET)
+//        @RequestMapping(value = "login",method = RequestMethod.GET)
+    @GetMapping("/login")
     public String login(){
 //        return "login";
 //        return "index";
-            return "redirect:/login.html";
+            return "login";
     }
 //    @RequestMapping("/user/login")
 //    public String login(@RequestParam("username") String username,

@@ -48,9 +48,9 @@ public class MyUserDetailService implements UserDetailsService {
 
         List<GrantedAuthority> list = new ArrayList<GrantedAuthority>();
 
-//        list.add(new SimpleGrantedAuthority("PRODORDER_READ"));
-//        list.add(new SimpleGrantedAuthority("PRODORDER_DELETE"));
-//        list.add(new SimpleGrantedAuthority("PRODORDER_READ"));
+        list.add(new SimpleGrantedAuthority("PRODORDER_READ"));
+        list.add(new SimpleGrantedAuthority("PRODORDER_DELETE"));
+        list.add(new SimpleGrantedAuthority("PRODORDER_READ"));
 
         return list;
     }

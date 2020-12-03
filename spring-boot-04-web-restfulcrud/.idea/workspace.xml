@@ -2,53 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c187bd4e-5821-492a-ba91-9c43a5d828de" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/mapper/ProdCategoryMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/mapper/ProdCategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/model/ProdCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/service/impl/ProdCategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/security/MyUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/security/SecurityConfig.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/error/404.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/error/4xx.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/error/5xx.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-boot-02-config-autoconfig/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../spring-boot-03-logging/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-research/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/CustomerResearchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/CustomerResearchApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/mapper/ProdOrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/mapper/ProdOrderMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/mapper/ProdOrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/mapper/ProdOrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/controller/ProdOrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/controller/ProdOrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/java/com/managementsystem/web/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../customer-research/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/prodorder/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/prodorder/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/prodorder/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/prodorder/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/prodorder/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/prodorder/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/prodorder/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../customer-research/src/main/resources/templates/prodorder/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot-02-config-autoconfig/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-02-config-autoconfig/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot-02-config-autoconfig/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-02-config-autoconfig/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot-03-logging/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-03-logging/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot-03-logging/target/test-classes/com/atguigu/springboot/SpringBoot03LoggingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-03-logging/target/test-classes/com/atguigu/springboot/SpringBoot03LoggingApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asserts/img/bootstrap-solid.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asserts/js/Chart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asserts/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asserts/js/feather.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asserts/js/jquery-3.2.1.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/asserts/js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-boot-04-web-restfulcrud.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/asserts/img/bootstrap-solid.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/asserts/js/Chart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/asserts/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/asserts/js/feather.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/asserts/js/jquery-3.2.1.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/asserts/js/popper.min.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -264,7 +230,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-225" />
     <option name="y" value="72" />
     <option name="width" value="1890" />
@@ -275,7 +241,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -373,6 +338,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -384,7 +350,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../customer-research" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -449,18 +415,18 @@
       <workItem from="1606120805829" duration="1552000" />
       <workItem from="1606693321743" duration="9076000" />
       <workItem from="1606786854945" duration="2257000" />
-      <workItem from="1606828097801" duration="596000" />
+      <workItem from="1606828097801" duration="1199000" />
+      <workItem from="1606914505796" duration="1207000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87137000" />
+    <option name="totallyTimeSpent" value="88947000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-67" y="21" width="1260" height="640" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.046589017" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49760765" visible="true" weight="0.27647534" />
       <window_info id="Structure" order="1" sideWeight="0.50239235" side_tool="true" weight="0.261924" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -484,7 +450,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.024958402" />
+      <window_info anchor="right" id="Ant Build" order="1" visible="true" weight="0.024252223" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2497979" />
       <window_info anchor="right" id="Maven" order="3" weight="0.32983023" />
       <window_info anchor="right" id="Palette" order="4" />
@@ -530,16 +496,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/login_en_us.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/login_zh_CN.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/atguigu/springboot/component/LoginHandlerIntercep.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
@@ -648,8 +614,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/i18n/login.properties">
-      <provider editor-type-id="ResourceBundle" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="ResourceBundle" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/commons/bar.html">
       <provider selected="true" editor-type-id="text-editor">
