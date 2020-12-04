@@ -39,7 +39,7 @@ public class CustomerResearchApplication {
     public PasswordEncoder createPwdEncoder(){
 
         return new BCryptPasswordEncoder();
-//        将密码进行多次的MD5加密
+//        将密码进行多次的加密
 
     }
 

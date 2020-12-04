@@ -9,8 +9,8 @@ import java.util.List;
 public interface ProdOrderService {
 
     public PageResult<ProdOrder> findPageResult(ProdOrder condition,int page,int pageSize);
-    public  void save(ProdOrder order);
 
+    public  void save(ProdOrder order);
 
     public ProdOrder findByOrderId(String order_id);
 
@@ -19,4 +19,5 @@ public interface ProdOrderService {
     public void update(ProdOrder order);
 
     public List<MonthIncome> getMonthIncomes();
+
 }

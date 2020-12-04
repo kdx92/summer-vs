@@ -4,7 +4,6 @@ public class ProdCategory {
     private int id;
     private String prod_name;
     private int status;
-
     public int getId() {
         return id;
     }

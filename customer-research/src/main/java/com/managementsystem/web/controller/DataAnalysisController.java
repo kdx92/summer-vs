@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.List;
 
 @Controller
@@ -15,6 +14,7 @@ public class DataAnalysisController {
 
     @Autowired
     ProdOrderService orderService;
+
     @RequestMapping("income")
     public String income() {
         return "dataanalysis/income";
@@ -23,7 +23,9 @@ public class DataAnalysisController {
     @RequestMapping("monthIncomes")
     @ResponseBody
     public List<MonthIncome> monthIncomes(){
+
         List<MonthIncome> list = orderService.getMonthIncomes();
         return list;
+
     };
 }

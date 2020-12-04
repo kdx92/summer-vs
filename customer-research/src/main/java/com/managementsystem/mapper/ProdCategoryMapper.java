@@ -15,5 +15,4 @@ public interface ProdCategoryMapper {
 //    返回所有的商品类型信息
     public List<ProdCategory> findAllList();
 
-
 }

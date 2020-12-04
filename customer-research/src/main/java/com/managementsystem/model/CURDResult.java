@@ -29,5 +29,4 @@ public class CURDResult {
 
     private String msg="";
 
-
 }

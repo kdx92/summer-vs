@@ -2,16 +2,10 @@ package com.managementsystem.mapper;
 
 import com.managementsystem.model.MonthIncome;
 import com.managementsystem.model.ProdOrder;
-//import com.gyf.szcrm.model.MonthIncome;
-import com.managementsystem.model.ProdOrder;
-import org.springframework.context.annotation.Bean;
-
 import java.util.List;
 import java.util.Map;
 
-
 public interface ProdOrderMapper {
-
 
     public int findCountByMap(Map<String, Object> map);
 

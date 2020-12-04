@@ -93,7 +93,7 @@ public class ProdOrderController {
     @ResponseBody
     public PageResult<ProdOrder> listJson(ProdOrder condition, int page,int limit){
         System.out.println(condition);
-        System.out.println(condition);
+//        System.out.println(condition);
         PageResult<ProdOrder> result= orderService.findPageResult(condition,page,limit);
 
         return result;

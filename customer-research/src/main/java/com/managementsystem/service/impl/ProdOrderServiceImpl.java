@@ -7,8 +7,6 @@ import com.managementsystem.model.ProdOrder;
 import com.managementsystem.service.ProdOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -42,6 +40,7 @@ public class ProdOrderServiceImpl implements ProdOrderService {
 
     @Override
     public void save(ProdOrder order) {
+
         orderMapper.insert(order);
 
     }
@@ -54,18 +53,22 @@ public class ProdOrderServiceImpl implements ProdOrderService {
 
     @Override
     public void deleteByOrderId(String order_id) {
+
         orderMapper.deleteByOrderId(order_id);
 
     }
 
     @Override
     public void update(ProdOrder order) {
+
         orderMapper.update(order);
 
     }
 
     @Override
     public List<MonthIncome> getMonthIncomes() {
+
         return orderMapper.getMonthIncomes();
+
     }
 }

@@ -20,8 +20,11 @@ public class ProdCategoryServiceImpl implements ProdCategoryService {
 
     @Autowired
     ProdCategoryMapper categoryMapper;
+
     @Override
     public List<ProdCategory> findAllList() {
+
         return categoryMapper.findAllList();
+
     }
 }

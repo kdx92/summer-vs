@@ -10,4 +10,5 @@ import java.util.List;
 public interface ProdCategoryService {
 
    public List<ProdCategory> findAllList();
+
 }

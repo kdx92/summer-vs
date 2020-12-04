@@ -4,7 +4,6 @@ import com.managementsystem.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -35,7 +34,6 @@ public class MyUserDetailService implements UserDetailsService {
         if(dbUser == null){
             return null;
         }
-
         String pwd = passwordEncoder.encode(dbUser.getPassword());
         System.out.println("密码加密后：" + pwd);
         return new User(username,
@@ -47,10 +45,11 @@ public class MyUserDetailService implements UserDetailsService {
     public Collection<? extends GrantedAuthority> getCurrentUserAuthorities(){
 
         List<GrantedAuthority> list = new ArrayList<GrantedAuthority>();
-
-        list.add(new SimpleGrantedAuthority("PRODORDER_READ"));
         list.add(new SimpleGrantedAuthority("PRODORDER_DELETE"));
         list.add(new SimpleGrantedAuthority("PRODORDER_READ"));
+        list.add(new SimpleGrantedAuthority("PRODORDER_ADD"));
+        list.add(new SimpleGrantedAuthority("PRODORDER_SAVE"));
+        list.add(new SimpleGrantedAuthority("PRODORDER_EDIT"));
 
         return list;
     }

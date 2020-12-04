@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.managementsystem.mapper.ProdOrderMapper">
-    <!--SQL片段拼接-->
+<!--SQL片段拼接-->
     <sql id="search_where">
         <where>
             <if test="condition.wechat_no != null and condition.wechat_no !=''">
@@ -17,7 +17,7 @@
     </sql>
 
     <select id="findCountByMap" parameterType="map" resultType="int">
-        select count(*) from t_prod_order
+      select count(*) from t_prod_order
         <include refid="search_where"></include>
     </select>
 

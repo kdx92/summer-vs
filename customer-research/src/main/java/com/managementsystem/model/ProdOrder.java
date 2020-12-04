@@ -38,7 +38,6 @@ public class ProdOrder {
         this.name = name;
     }
 
-
     public String getWechat_no() {
         return wechat_no;
     }
